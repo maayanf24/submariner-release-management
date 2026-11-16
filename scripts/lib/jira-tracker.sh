@@ -820,6 +820,7 @@ create_release_tracker() {
         labels: $labels,
         description: {type:"doc",version:1,content:$paragraphs},
         additionalAttributes: {
+          components: [{id:"33720"}],
           customfield_10464: {id:"10608"}
         }
       } + (if $assignee != "" then {assignee: $assignee} else {} end)' > "$sub_json_file"
